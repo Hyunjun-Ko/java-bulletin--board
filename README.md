@@ -1,1 +1,1 @@
-# java-bulletin--board
+# java-bulletin-board
