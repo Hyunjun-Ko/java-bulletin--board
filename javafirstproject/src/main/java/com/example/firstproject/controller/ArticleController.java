@@ -33,7 +33,7 @@ public class ArticleController {
         // 2. 리파지터리로 엔티티를 DB에 저장
         Article saved = articleRepository.save(article); // article 엔티티를 저장해 saved 객체에 반환
         log.info(saved.toString()); //System.out.println(saved.toString());
-        return "";
+        return "redirect:/articles/" + saved.getId(); // 리다이렉트를 작성할 위치
     }
 
     @GetMapping("/articles/{id}") // 데이터 조회 요청 접수
@@ -44,7 +44,7 @@ public class ArticleController {
         // 2. 모델에 데이터 등록하기
         model.addAttribute("article", articleEntity);
         // 3. 뷰 페이지 반환하기
-        return "articles/show";
+        return "articles/show"; // 목록으로 돌아가기 링크를 넣을 뷰 파일 확인
     }
 
     @GetMapping("/articles")
