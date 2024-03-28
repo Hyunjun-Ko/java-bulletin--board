@@ -13,7 +13,7 @@ import lombok.ToString;
 @NoArgsConstructor // 매개변수가 아예 없는 기본 생성자 자동 생성
 public class CommentDto {
     private Long id; // 댓글의 id
-    @JsonProperty("article_id")
+    //@JsonProperty("article_id")
     private Long articleId; // 댓글의 부모 id
     private String nickname; // 댓글 작성자
     private String body; // 댓글 본문
